@@ -61,7 +61,7 @@ export const SentimentProvider = ({ children }) => {
     setError("");
 
     try {
-      const response = await fetch(`/api/overview?keyword=${encodeURIComponent(nextKeyword)}`);
+      const response = await fetch(`https://sentixai-backend.onrender.com/api/overview?keyword=${encodeURIComponent(nextKeyword)}`);
       if (!response.ok) {
         throw new Error("Overview API unavailable");
       }
@@ -76,7 +76,7 @@ export const SentimentProvider = ({ children }) => {
 
   const refreshHealth = useCallback(async () => {
     try {
-      const response = await fetch("/api/health");
+      const response = await fetch("https://sentixai-backend.onrender.com/api/health");
       const payload = await response.json();
       setHealth(payload);
     } catch {
@@ -93,7 +93,7 @@ export const SentimentProvider = ({ children }) => {
     setKeyword(nextKeyword);
 
     try {
-      const analyzeResponse = await fetch("/api/analyze", {
+      const analyzeResponse = await fetch("https://sentixai-backend.onrender.com/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: nextKeyword }),

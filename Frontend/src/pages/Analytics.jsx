@@ -12,7 +12,7 @@ const Analytics = () => {
 
     const exportAnalytics = async (format = 'xlsx') => {
         try {
-            const response = await fetch(`/api/export?keyword=${encodeURIComponent(keyword)}&format=${encodeURIComponent(format)}`);
+            const response = await fetch(`https://sentixai-backend.onrender.com/api/export?keyword=${encodeURIComponent(keyword)}&format=${encodeURIComponent(format)}`);
             if (!response.ok) {
                 throw new Error('Export failed');
             }
