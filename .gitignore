@@ -1,0 +1,21 @@
+# Python
+.venv/
+ML/.venv/
+ML/env/
+env/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Node
+node_modules/
+Frontend/node_modules/
+Backend/server/node_modules/
+Frontend/dist/
+
+# Dataset (DO NOT PUSH)
+ML/training.1600000.processed.noemoticon.csv
+
+# Env files
+.env
+Backend/server/.env

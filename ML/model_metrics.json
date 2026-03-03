@@ -1,0 +1,20 @@
+{
+  "dataset_path": "training.1600000.processed.noemoticon.csv",
+  "total_samples": 1591297,
+  "train_samples": 1273037,
+  "test_samples": 318260,
+  "accuracy": 0.791224,
+  "precision": 0.781549,
+  "recall": 0.808184,
+  "f1_score": 0.794643,
+  "confusion_matrix": [
+    [
+      123258,
+      35933
+    ],
+    [
+      30512,
+      128557
+    ]
+  ]
+}
